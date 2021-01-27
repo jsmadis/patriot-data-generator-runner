@@ -18,8 +18,7 @@ public class Runner {
         Device device = JSONSerializer.deserializeDevice(new File(deviceFile));
         device.registerToCoapServer();
         CoapControlClient client = new CoapControlClient("coap://127.0.0.1:5683");
-
-
+        CoapControlServer.getInstance().start();
 
 
 
